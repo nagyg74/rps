@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    .container-fluid.bg-primary
+        .row
+            .page-header
+                h1.text-center Rock, Paper, Scissors
+    .container
+        .row.bet
+            .col-sm-6
+                h4.text-center Choose server:
+                    span.server-switch
+                        span(ng-class="{'text-primary':app.server}") Local
+                        i.fa.fa-lg.fa-fw.fa-toggle-on.text-primary(aria-hidden="true" ng-class="{'fa-flip-horizontal':app.server}" ng-click="app.toggleServer()")
+                        span(ng-class="{'text-primary':!app.server}") Remote
+                computer-bet(side="left" server="app.server")
+                .visible-xs-block.xs-vspacer
+            .col-sm-6
+                h4.text-center Make your choice:
+                user-bet(side="right")
+    .container-fluid.roll-container
+        .container
+            .row
+                .col-sm-12.col-md-4.col-md-offset-4
+                    a.btn.btn-lg.btn-success.btn-block.roll-button(ng-click="app.roll()" ng-disabled="!app.selections.valid")
+                        h3 Let's roll
+    .container
+        .row
+            .col-sm-12.col-md-4.col-md-offset-4
+                game-history

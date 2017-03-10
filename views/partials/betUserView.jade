@@ -1,0 +1,14 @@
+.user-bet
+    .bet-list.row
+        .col-xs-12.col-sm-4
+            button.bet-button.btn.btn-lg.btn-block(ng-click="select(0)" ng-class="{'btn-primary': betSelecion.value == 0}")
+                i.fa.fa-3x.fa-fw.fa-hand-rock-o( aria-hidden="true")
+            .visible-xs-block.xs-vspacer
+        .col-xs-12.col-sm-4
+            button.bet-button.btn.btn-lg.btn-block(ng-click="select(1)" ng-class="{'btn-primary': betSelecion.value == 1}")
+                i.fa.fa-3x.fa-fw.fa-hand-paper-o( aria-hidden="true")
+            .visible-xs-block.xs-vspacer                
+        .col-xs-12.col-sm-4
+            button.bet-button.btn.btn-lg.btn-block(ng-click="select(2)" ng-class="{'btn-primary': betSelecion.value == 2}")
+                i.fa.fa-3x.fa-fw.fa-hand-scissors-o( aria-hidden="true")
+            .visible-xs-block.xs-vspacer                

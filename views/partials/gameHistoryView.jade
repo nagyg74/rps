@@ -1,0 +1,26 @@
+.game-history.text-center
+    h3 Game History
+    table.table.table-striped.table-hover.table-bordered
+        thead
+            tr
+                th.text-center
+                    h3 #
+                th.text-center
+                    h3 Computer
+                    span.small Score: {{HistoryVM.score.left}}
+                //th.text-center Winner
+                th.text-center
+                    h3 You
+                    span.small Score: {{HistoryVM.score.right}}
+        tbody
+            tr(ng-repeat="game in HistoryVM.history | orderBy:'$index':true")
+                td.text-center
+                    h3 {{HistoryVM.history.length-$index}}
+                td.text-center(ng-class="{'text-success':game.result=='left',success:game.result=='left','text-danger':game.result=='right',danger:game.result=='right'}")
+                    i.fa.fa-3x.fa-fw(ng-class="'fa-hand-'+game.left.alias+'-o'" aria-hidden="true")
+                //td.text-center {{game.result}}
+                td.text-center(ng-class="{'text-success':game.result=='right',success:game.result=='right','text-danger':game.result=='left',danger:game.result=='left'}")
+                    i.fa.fa-3x.fa-fw(ng-class="'fa-hand-'+game.right.alias+'-o'" aria-hidden="true")
+    a.btn.btn-lg.btn-danger.btn-block.clr-history-button(ng-click="HistoryVM.resetHistory()" ng-disabled="!HistoryVM.history.length")
+        i.fa.fa-lg.fa-fw.fa-trash
+        | Clear History

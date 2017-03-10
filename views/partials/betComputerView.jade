@@ -1,0 +1,7 @@
+.computer-bet
+    .thinking.text-center.text-primary(ng-if="!betSelecion")
+        i.fa.fa-cog.fa-spin.fa-4x.fa-fw
+        h3 Thinking
+    .ready.text-center.text-success(ng-if="betSelecion")
+        i.fa.fa-thumbs-o-up.fa-4x.fa-fw
+        h3 Ready
