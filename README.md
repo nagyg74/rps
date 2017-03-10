@@ -22,3 +22,12 @@ The server will listen on localhost:3010
 ```javascript
 npm start
 ```
+
+### Disclaimer `:-)`
+
+- Please don't measure graphical design.
+- I have used the plain Bootstrap theme and Font Awesome for the icons.
+- Some latency is set for get use of async methods.
+- All source files can be found in the `src` folder.
+- Grunt task makes the file packing and minifying.
+- `.less` files are compiled by Express. 
