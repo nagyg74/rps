@@ -23,7 +23,7 @@ The server will listen on localhost:3010
 npm start
 ```
 
-### Disclaimer `:-)`
+### Disclaimer :simple_smile:
 
 - Please don't measure graphical design.
 - I have used the plain Bootstrap theme and Font Awesome for the icons.
